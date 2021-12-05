@@ -84,6 +84,27 @@ Kafka - это сервис очередей, высоконагруженная
 - Добавьте еще один файл в папку ```/data``` на хостовой машине;
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
+```
+Контейнер centos
+sudo docker run -it -d -v ~/Dev/Netology/data:/data centos
+sudo docker exec -it 094928ae8ff6 bash 
+sudo vi testfile.txt
+
+Контейнер debian
+sudo docker run -it -d -v ~/Dev/Netology/data:/data debian
+
+Хостовая машина
+sudo vi /Dev/Netology/data/testfile2.txt
+
+Контейнер debian
+sudo docker exec -it 69b08de07e87 bash
+ls -al
+![image](https://user-images.githubusercontent.com/48878229/144739010-3e0814a2-c9f4-4c24-84a9-ae94fc0e15d2.png)
+
+```
+
+
+
 ## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
