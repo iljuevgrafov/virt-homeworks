@@ -99,9 +99,9 @@ sudo vi /Dev/Netology/data/testfile2.txt
 Контейнер debian
 sudo docker exec -it 69b08de07e87 bash
 ls -al
+```
 ![image](https://user-images.githubusercontent.com/48878229/144739010-3e0814a2-c9f4-4c24-84a9-ae94fc0e15d2.png)
 
-```
 
 
 
