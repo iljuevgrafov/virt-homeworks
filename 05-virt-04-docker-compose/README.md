@@ -33,7 +33,8 @@
   <img width="1200" height="600" src="./assets/yc_01.png">
 </p>
 
-![image](https://user-images.githubusercontent.com/48878229/145704041-4eaae3a9-5a91-4db7-b6cd-0ed6f947638e.png)
+![image](https://user-images.githubusercontent.com/48878229/145720278-b3264ea7-a48c-4964-a204-e1b226a33310.png)
+
 
 ## Задача 3
 
