@@ -33,6 +33,8 @@
   <img width="1200" height="600" src="./assets/yc_01.png">
 </p>
 
+![image](https://user-images.githubusercontent.com/48878229/145704041-4eaae3a9-5a91-4db7-b6cd-0ed6f947638e.png)
+
 ## Задача 3
 
 Создать ваш первый готовый к боевой эксплуатации компонент мониторинга, состоящий из стека микросервисов.
