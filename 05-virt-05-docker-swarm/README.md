@@ -47,6 +47,8 @@ docker node ls
 ```
 docker service ls
 ```
+![image](https://user-images.githubusercontent.com/48878229/147595644-43069468-40dd-4d7b-977e-6ef0b5304b52.png)
+
 
 
 ## Задача 4 (*)
