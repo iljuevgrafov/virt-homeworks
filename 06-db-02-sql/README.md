@@ -11,32 +11,32 @@
 в который будут складываться данные БД и бэкапы.
 
 Приведите получившуюся команду или docker-compose манифест.
+```
+Создаем 2 тома  
+docker volume create vol1  
+docker volume create vol2  
 
-Создаем 2 тома
-docker volume create vol1
-docker volume create vol2
-
-Содержание docker-compose:
-services:
-  postgresdb:
-    image: postgres
-    environment:
-      POSTGRES_DB: "test_db"
-      POSTGRES_USER: "test-admin-user"
-      POSTGRES_PASSWORD: "123456"
-    volumes:
-        - vol1:/var/lib/postgresql/data
-        - vol2:/var/lib/postgresql/backup
-    ports:
-      - "5432:5432"
-volumes:
-    vol1:
-        external:
-            name: vol1
-   vol2:
-        external:
-            name: vol2
-
+Содержание docker-compose:  
+services:  
+  postgresdb:  
+    image: postgres  
+    environment:  
+      POSTGRES_DB: "test_db"  
+      POSTGRES_USER: "test-admin-user"  
+      POSTGRES_PASSWORD: "123456"  
+    volumes:  
+        - vol1:/var/lib/postgresql/data  
+        - vol2:/var/lib/postgresql/backup  
+    ports:  
+      - "5432:5432"  
+volumes:  
+    vol1:  
+        external:  
+            name: vol1  
+   vol2:  
+        external:  
+            name: vol2  
+```
 ## Задача 2
 
 В БД из задачи 1: 
