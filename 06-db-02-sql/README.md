@@ -64,7 +64,10 @@ volumes:
 - список пользователей с правами над таблицами test_db
 
 ![image](https://user-images.githubusercontent.com/48878229/149655120-eb8e5096-e142-468c-8f8b-cacb81a4f6ab.png)
-
+```
+SELECT table_name, privilege_type, grantee
+FROM   information_schema.table_privileges 
+``
 
 ## Задача 3
 
