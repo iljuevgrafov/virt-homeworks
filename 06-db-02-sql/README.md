@@ -138,9 +138,15 @@ select count(*) from clients;
 |Иоганн Себастьян Бах| Гитара |
 
 Приведите SQL-запросы для выполнения данных операций.
-
+```
+update clients set заказ = 3 where ФИО = 'Иванов Иван Иванович';
+```
 Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод данного запроса.
- 
+```
+select * from clients where заказ IS NOT NULL;
+```
+ <img width="363" alt="image" src="https://user-images.githubusercontent.com/48878229/149674357-5403f86b-2208-4e43-a705-f49d9c82bfe9.png">
+
 Подсказк - используйте директиву `UPDATE`.
 
 ## Задача 5
