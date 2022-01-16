@@ -118,6 +118,12 @@ table_name | privilege_type |     grantee
 - приведите в ответе:
     - запросы 
     - результаты их выполнения.
+```
+select count(*) from orders;
+select count(*) from clients;
+```
+<img width="252" alt="image" src="https://user-images.githubusercontent.com/48878229/149674001-92abedbd-1392-4091-a067-b8484b5c52ea.png">
+
 
 ## Задача 4
 
