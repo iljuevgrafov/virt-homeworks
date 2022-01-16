@@ -65,9 +65,29 @@ volumes:
 
 ![image](https://user-images.githubusercontent.com/48878229/149655120-eb8e5096-e142-468c-8f8b-cacb81a4f6ab.png)
 ```
+SQL-запрос
 SELECT table_name, privilege_type, grantee
 FROM   information_schema.table_privileges 
-``
+WHERE table_schema = 'public';
+
+Список пользователей
+table_name | privilege_type |     grantee     
+------------+----------------+-----------------
+ orders     | INSERT         | test-admin-user
+ orders     | SELECT         | test-admin-user
+ orders     | UPDATE         | test-admin-user
+ orders     | DELETE         | test-admin-user
+ orders     | TRUNCATE       | test-admin-user
+ orders     | REFERENCES     | test-admin-user
+ orders     | TRIGGER        | test-admin-user
+ clients    | INSERT         | test-admin-user
+ clients    | SELECT         | test-admin-user
+ clients    | UPDATE         | test-admin-user
+ clients    | DELETE         | test-admin-user
+ clients    | TRUNCATE       | test-admin-user
+ clients    | REFERENCES     | test-admin-user
+ clients    | TRIGGER        | test-admin-user
+```
 
 ## Задача 3
 
