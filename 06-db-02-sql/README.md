@@ -180,7 +180,9 @@ QUERY PLAN
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
 
 ```
-pg_dump -U test-admin-user  test_db > /var/lib/postgresql/backup/test_db_backup
+pg_dump -U test-admin-user -c test_db > /var/lib/postgresql/backup/test_db_backup
+psql -U test-admin-user test_db < /var/lib/postgresql/backup/test_db_backup
+
 ```
 
 ---
