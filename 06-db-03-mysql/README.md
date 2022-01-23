@@ -26,6 +26,8 @@
 
 
 ![image](https://user-images.githubusercontent.com/48878229/150686200-7c3442c7-b7ef-4572-b5ea-2ed0dd32b59a.png)
+![image](https://user-images.githubusercontent.com/48878229/150686252-dcb720bf-1e33-4ada-b7eb-91b3e9fc6c43.png)
+
 
 
 ## Задача 2
