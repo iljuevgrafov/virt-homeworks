@@ -60,6 +60,9 @@
 - на `MyISAM`
 - на `InnoDB`
 
+```
+InnoDB
+```
 ## Задача 4 
 
 Изучите файл `my.cnf` в директории /etc/mysql.
