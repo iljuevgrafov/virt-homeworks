@@ -84,7 +84,26 @@ InnoDB
 - Размер файла логов операций 100 Мб
 
 Приведите в ответе измененный файл `my.cnf`.
+```
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+secure-file-priv= NULL
 
+innodb_use_fdatasync=1
+innodb_fsync_threshold = 1M
+
+innodb_file_per_table = 1
+innodb_file_format = Barracuda
+innodb_log_buffer_size = 1M
+
+innodb_buffer_pool_size = 8G
+innodb_buffer_pool_instances = 16
+innodb_buffer_pool_chunk_size = 128M
+
+innodb_log_file_size = 100M
+```
 ---
 
 ### Как оформить ДЗ?
