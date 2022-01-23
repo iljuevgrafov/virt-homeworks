@@ -46,6 +46,9 @@
 Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и 
 **приведите в ответе к задаче**.
 
+![image](https://user-images.githubusercontent.com/48878229/150687274-c6d716c7-9858-4240-b0b0-1a7768b0bf6e.png)
+
+
 ## Задача 3
 
 Установите профилирование `SET profiling = 1`.
