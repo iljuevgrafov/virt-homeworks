@@ -45,6 +45,10 @@ exit
 с наибольшим средним значением размера элементов в байтах.
 
 **Приведите в ответе** команду, которую вы использовали для вычисления и полученный результат.
+```
+select attname, avg_width from pg_stats where(tablename = 'orders' and avg_width=(select max(avg_width) from pg_stats where tablename = 'orders'));
+```
+![image](https://user-images.githubusercontent.com/48878229/151705710-1a20199e-5ad2-4bd6-842b-f6bea04d8901.png)
 
 ## Задача 3
 
