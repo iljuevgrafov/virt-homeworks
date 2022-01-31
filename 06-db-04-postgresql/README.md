@@ -58,7 +58,30 @@ select attname, avg_width from pg_stats where(tablename = 'orders' and avg_width
 
 Предложите SQL-транзакцию для проведения данной операции.
 
+```
+CREATE TABLE orders_1 (LIKE orders);
+CREATE TABLE orders_2 (LIKE orders);
+
+INSERT INTO orders_1 SELECT * FROM orders WHERE
+	price > 499;
+DELETE FROM orders WHERE price > 499;
+
+INSERT INTO orders_2 SELECT * FROM orders WHERE
+	price <= 499;
+DELETE FROM orders WHERE price <= 499;
+```
+
 Можно ли было изначально исключить "ручное" разбиение при проектировании таблицы orders?
+
+```
+CREATE TABLE orders_1
+    PARTITION OF orders
+    FOR VALUES FROM (0) TO (499);
+
+CREATE TABLE orders_2
+    PARTITION OF orders
+    FOR VALUES FROM (499) TO (499);
+```
 
 ## Задача 4
 
