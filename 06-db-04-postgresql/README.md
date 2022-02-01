@@ -102,7 +102,7 @@ CREATE TABLE public.orders (
     title character varying(80) NOT NULL UNIQUE,
     price integer DEFAULT 0
 );
-
+```
 ---
 
 ### Как cдавать задание
