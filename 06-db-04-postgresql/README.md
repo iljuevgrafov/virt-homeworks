@@ -95,6 +95,14 @@ CREATE TABLE orders_2
 
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
 
+```
+Объявеление таблицы исправил бы на следующее:
+CREATE TABLE public.orders (
+    id integer NOT NULL,
+    title character varying(80) NOT NULL UNIQUE,
+    price integer DEFAULT 0
+);
+
 ---
 
 ### Как cдавать задание
