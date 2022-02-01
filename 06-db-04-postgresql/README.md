@@ -78,7 +78,7 @@ CREATE TABLE orders (
     id integer NOT NULL,
     title character varying(80) NOT NULL,
     price integer DEFAULT 0
-); 
+) PARTITION BY RANGE(price); 
 
 CREATE TABLE orders_1
     PARTITION OF orders
