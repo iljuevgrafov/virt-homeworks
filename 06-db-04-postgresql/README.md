@@ -74,13 +74,19 @@ DELETE FROM orders WHERE price <= 499;
 Можно ли было изначально исключить "ручное" разбиение при проектировании таблицы orders?
 
 ```
+CREATE TABLE orders (
+    id integer NOT NULL,
+    title character varying(80) NOT NULL,
+    price integer DEFAULT 0
+); 
+
 CREATE TABLE orders_1
     PARTITION OF orders
     FOR VALUES FROM (0) TO (499);
 
 CREATE TABLE orders_2
     PARTITION OF orders
-    FOR VALUES FROM (499) TO (499);
+    FOR VALUES FROM (499) TO (1000000) # не нашел спопоба указать диапазон только с начальным значением (499);
 ```
 
 ## Задача 4
