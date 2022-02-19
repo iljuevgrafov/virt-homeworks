@@ -50,7 +50,10 @@ chown -R 1000:1000 /home/elasticsearch-8.0.0
 cd elasticsearch-8.0.0
 su elasticsearch ./bin/elasticsearch
 ```
-
+```
+Ссылка на репозиторий
+https://hub.docker.com/repository/docker/iljuevgrafov/centoselastic
+```
 ```
 ответ `elasticsearch` на запрос пути `/` в json виде
 
