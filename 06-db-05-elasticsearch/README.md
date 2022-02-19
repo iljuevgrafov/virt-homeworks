@@ -57,12 +57,23 @@ https://hub.docker.com/repository/docker/iljuevgrafov/centoselastic
 ```
 ответ `elasticsearch` на запрос пути `/` в json виде
 
-{"error":{"root_cause":[{"type":"security_exception",
-"reason":"missing authentication credentials for REST request [/]",
-"header":{"WWW-Authenticate":["Basic realm=\"security\" charset=\"UTF-8\"","ApiKey"]}}],
-"type":"security_exception",
-"reason":"missing authentication credentials for REST request [/]",
-"header":{"WWW-Authenticate":["Basic realm=\"security\" charset=\"UTF-8\"","ApiKey"]}}
+{
+    "name": "netology_test",
+    "cluster_name": "elasticsearch",
+    "cluster_uuid": "oLZ5wEW4SXqMzGlO1l3tMw",
+    "version": {
+        "number": "8.0.0",
+        "build_flavor": "default",
+        "build_type": "tar",
+        "build_hash": "1b6a7ece17463df5ff54a3e1302d825889aa1161",
+        "build_date": "2022-02-03T16:47:57.507843096Z",
+        "build_snapshot": false,
+        "lucene_version": "9.0.0",
+        "minimum_wire_compatibility_version": "7.17.0",
+        "minimum_index_compatibility_version": "7.0.0"
+    },
+    "tagline": "You Know, for Search"
+}
 ```
 
 Далее мы будем работать с данным экземпляром elasticsearch.
