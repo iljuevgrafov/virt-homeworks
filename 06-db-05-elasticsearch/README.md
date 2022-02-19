@@ -48,7 +48,7 @@ chown -R elasticsearch /var/lib
 chown -R 1000:1000 /var/log/elasticsearch/
 chown -R 1000:1000 /home/elasticsearch-8.0.0
 cd elasticsearch-8.0.0
-#su elasticsearch ./bin/elasticsearch
+su elasticsearch ./bin/elasticsearch
 ```
 
 ```
