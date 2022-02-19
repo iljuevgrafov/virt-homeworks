@@ -29,6 +29,39 @@
 - при некоторых проблемах вам поможет docker директива ulimit
 - elasticsearch в логах обычно описывает проблему и пути ее решения
 
+```
+Dockerfile манифест
+FROM centos
+COPY ./elasticinstallscript /home/elasticinstallscript
+COPY ./elasticsearch.yml /home/elasticsearch.yml
+RUN /bin/bash -c "chmod +x /home/elasticinstallscript && /home/elasticinstallscript"
+
+Bash-script elasticinstallscript
+
+#!/bin/bash
+useradd elasticsearch 
+cd /home
+curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.0.0-linux-x86_64.tar.gz
+tar -xzvf elasticsearch-8.0.0-linux-x86_64.tar.gz
+cp /home/elasticsearch.yml ./elasticsearch-8.0.0/config/elasticsearch.yml
+chown -R elasticsearch /var/lib
+chown -R 1000:1000 /var/log/elasticsearch/
+chown -R 1000:1000 /home/elasticsearch-8.0.0
+cd elasticsearch-8.0.0
+#su elasticsearch ./bin/elasticsearch
+```
+
+```
+ответ `elasticsearch` на запрос пути `/` в json виде
+
+{"error":{"root_cause":[{"type":"security_exception",
+"reason":"missing authentication credentials for REST request [/]",
+"header":{"WWW-Authenticate":["Basic realm=\"security\" charset=\"UTF-8\"","ApiKey"]}}],
+"type":"security_exception",
+"reason":"missing authentication credentials for REST request [/]",
+"header":{"WWW-Authenticate":["Basic realm=\"security\" charset=\"UTF-8\"","ApiKey"]}}
+```
+
 Далее мы будем работать с данным экземпляром elasticsearch.
 
 ## Задача 2
