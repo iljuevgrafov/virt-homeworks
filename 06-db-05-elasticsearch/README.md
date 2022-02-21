@@ -95,6 +95,79 @@ https://hub.docker.com/repository/docker/iljuevgrafov/centoselastic
 | ind-3 | 2 | 4 |
 
 Получите список индексов и их статусов, используя API и **приведите в ответе** на задание.
+```
+{
+    "ind-1": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "1",
+                "provided_name": "ind-1",
+                "creation_date": "1645471827576",
+                "number_of_replicas": "0",
+                "uuid": "XBBBDqTsQL-hWP8RRTHZFw",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    },
+    "ind-2": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "2",
+                "provided_name": "ind-2",
+                "creation_date": "1645471851549",
+                "number_of_replicas": "1",
+                "uuid": "SISlKF2ETA6OhpCCWb_MSA",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    },
+    "ind-3": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "4",
+                "provided_name": "ind-3",
+                "creation_date": "1645471866318",
+                "number_of_replicas": "2",
+                "uuid": "l0uzg_koTd-H43yWpJQuhQ",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    }
+}
+```
 
 Получите состояние кластера `elasticsearch`, используя API.
 
