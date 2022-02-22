@@ -243,9 +243,7 @@ API запрос
 состояния кластера `elasticsearch`.
 
 **Приведите в ответе** список файлов в директории со `snapshot`ами.
-```
-![image](https://user-images.githubusercontent.com/48878229/155169163-18544998-15a6-4333-ab93-73a21fa2228c.png)
-```
+![image](https://user-images.githubusercontent.com/48878229/155169236-aaf9411f-f8df-4a42-9c82-d58f23033474.png)
 
 Удалите индекс `test` и создайте индекс `test-2`. **Приведите в ответе** список индексов.
 
