@@ -247,6 +247,8 @@ API запрос
 
 Удалите индекс `test` и создайте индекс `test-2`. **Приведите в ответе** список индексов.
 ```
+{
+    "test-2": {
         "aliases": {},
         "mappings": {},
         "settings": {
@@ -255,7 +257,17 @@ API запрос
                     "allocation": {
                         "include": {
                             "_tier_preference": "data_content"
-…                }
+                        }
+                    }
+                },
+                "number_of_shards": "1",
+                "provided_name": "test-2",
+                "creation_date": "1645546363110",
+                "number_of_replicas": "0",
+                "uuid": "e4Hulu9CQ3KzdOxloLhEUQ",
+                "version": {
+                    "created": "8000099"
+                }
             }
         }
     }
