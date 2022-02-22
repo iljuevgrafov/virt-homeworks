@@ -266,6 +266,9 @@ API запрос
 кластера `elasticsearch` из `snapshot`, созданного ранее. 
 
 **Приведите в ответе** запрос к API восстановления и итоговый список индексов.
+```
+POST 0.0.0.0:9200/_snapshot/netology_backup/my_first_snapshot/_restore
+```
 
 Подсказки:
 - возможно вам понадобится доработать `elasticsearch.yml` в части директивы `path.repo` и перезапустить `elasticsearch`
