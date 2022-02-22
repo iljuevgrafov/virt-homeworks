@@ -246,6 +246,21 @@ API запрос
 ![image](https://user-images.githubusercontent.com/48878229/155169236-aaf9411f-f8df-4a42-9c82-d58f23033474.png)
 
 Удалите индекс `test` и создайте индекс `test-2`. **Приведите в ответе** список индексов.
+```
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+…                }
+            }
+        }
+    }
+}
+```
 
 [Восстановите](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) состояние
 кластера `elasticsearch` из `snapshot`, созданного ранее. 
