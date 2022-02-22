@@ -195,6 +195,20 @@ https://hub.docker.com/repository/docker/iljuevgrafov/centoselastic
 данную директорию как `snapshot repository` c именем `netology_backup`.
 
 **Приведите в ответе** запрос API и результат вызова API для создания репозитория.
+```
+API запрос
+{
+    "type": "fs",
+    "settings": {
+        "location": "/home/elasticsearch-8.0.0/snapshots"
+    }
+}
+
+Результат вызова
+{
+    "acknowledged": true
+}
+```
 
 Создайте индекс `test` с 0 реплик и 1 шардом и **приведите в ответе** список индексов.
 
