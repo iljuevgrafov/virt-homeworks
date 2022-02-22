@@ -211,6 +211,33 @@ API запрос
 ```
 
 Создайте индекс `test` с 0 реплик и 1 шардом и **приведите в ответе** список индексов.
+```
+{
+    "test": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "1",
+                "provided_name": "test",
+                "creation_date": "1645545015908",
+                "number_of_replicas": "0",
+                "uuid": "9vFkmNQATXieuLf3vAldNQ",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    }
+}
+```
 
 [Создайте `snapshot`](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-take-snapshot.html) 
 состояния кластера `elasticsearch`.
