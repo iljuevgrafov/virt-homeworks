@@ -281,7 +281,56 @@ API запрос
 ```
 POST 0.0.0.0:9200/_snapshot/netology_backup/my_first_snapshot/_restore
 ```
-
+```
+{
+    "test": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "1",
+                "provided_name": "test",
+                "creation_date": "1645545015908",
+                "number_of_replicas": "0",
+                "uuid": "9TiIhHgoTiyutawzha8GKQ",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    },
+    "test-2": {
+        "aliases": {},
+        "mappings": {},
+        "settings": {
+            "index": {
+                "routing": {
+                    "allocation": {
+                        "include": {
+                            "_tier_preference": "data_content"
+                        }
+                    }
+                },
+                "number_of_shards": "1",
+                "provided_name": "test-2",
+                "creation_date": "1645546363110",
+                "number_of_replicas": "0",
+                "uuid": "e4Hulu9CQ3KzdOxloLhEUQ",
+                "version": {
+                    "created": "8000099"
+                }
+            }
+        }
+    }
+}
+```
 Подсказки:
 - возможно вам понадобится доработать `elasticsearch.yml` в части директивы `path.repo` и перезапустить `elasticsearch`
 
